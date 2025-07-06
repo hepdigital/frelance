@@ -1,0 +1,10 @@
+# freelance_tracker/public/.htaccess
+
+RewriteEngine On
+
+# Temel dizin public klasörünün kendisi olduğu için "/" olarak bırakılır.
+RewriteBase /
+
+# Eğer istenen bir dosya veya dizin değilse, isteği index.php'ye yönlendir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
